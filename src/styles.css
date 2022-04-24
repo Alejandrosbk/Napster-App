@@ -1,0 +1,85 @@
+/* Website Branding */
+
+:root {
+    --color-1: #1DB954;
+    --color-2: #121212;
+    --color-3: #000000;
+    --color-4: #FFFFFF;
+    --color-5: #181818;
+    --color-6: #ff0000;
+    --color-7: #26739D;
+    --color-8: #49FFD0;
+    --font-size-1: 1rem;
+    --font-size-2: 1.2rem;
+    --font-size-3: 1.8rem;
+    --shadow-1: rgb(0 0 0 / 35%) 0px 8px 24px;
+    --shadow-2: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    --border-radius-1: .25rem;
+    --border-radius-2: .5rem;
+    --font-family-1: 'Poppins', sans-serif;
+    --animation-1: 200ms;
+}
+
+* {
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-3);
+    font-family: var(--font-family-1);
+    font-size: var(--font-size-1);
+    color: var(--color-4);
+}
+
+input,
+button {
+    cursor: pointer;
+    font-family: var(--font-family-1);
+}
+
+button:disabled {
+    opacity: .5;
+}
+
+.fadeIn {
+    animation: fadeInAnimation ease 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+/* CHROME */
+
+::-webkit-scrollbar {
+    width: 4px;
+    height: 0px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color-8);
+    border: none;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--color-3);
+    border: none;
+}
+
+::-webkit-scrollbar-corner {
+    background: transparent;
+}

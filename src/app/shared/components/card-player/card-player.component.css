@@ -1,0 +1,105 @@
+.card-player {
+    background-color: #222222;
+    -webkit-box-flex: 1;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    -ms-flex: 1;
+    height: 5rem;
+    transition: all ease var(--animation-1);
+    border-radius: var(--border-radius-1);
+    cursor: pointer;
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+}
+
+.card-player.player-small {
+    background-color: rgba(255, 255, 255, .1);
+    border-radius: 4px;
+    -webkit-transition: .3s ease;
+    transition: .3s ease;
+}
+
+.card-player.player-small:hover {
+    background-color: rgba(255, 255, 255, 0.26);
+}
+
+.card-player:hover {
+    background-color: #303030;
+}
+
+.card-player .cover {
+    width: 5rem;
+    height: 100%;
+    object-fit: cover;
+    border-top-left-radius: var(--border-radius-1);
+    border-bottom-left-radius: var(--border-radius-1);
+}
+
+.card-player .content-player {
+    font-weight: 400;
+    letter-spacing: normal;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    text-align: left;
+    padding: 0 0 0 .75rem;
+}
+
+.card-player .buttons-player {
+    opacity: 0;
+    width: 5rem;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    transition: all ease var(--animation-1);
+}
+
+.card-player:hover .buttons-player {
+    opacity: 1;
+}
+
+.card-player .buttons-player .play-btn {
+    color: var(--color-4);
+    border: 0;
+    font-size: 1rem;
+    border-radius: 2rem;
+    background-color: var(--color-1);
+    width: 45px;
+    height: 45px;
+}
+
+.card-player.player-big {
+    position: relative;
+    flex-direction: column;
+    height: 18rem;
+    padding: 1rem;
+}
+
+.card-player.player-big .cover {
+    width: 100%;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    max-height: 200px;
+    border-radius: var(--border-radius-1);
+}
+
+.card-player.player-big .content-player {
+    padding: .5rem 0;
+    flex-direction: column;
+    align-self: flex-start;
+    align-items: flex-start;
+}
+
+.card-player.player-big .content-player .sub-title-track {
+    font-size: 80%;
+    opacity: .7;
+}
+
+.card-player.player-big .buttons-player {
+    position: absolute;
+    right: 0;
+    bottom: 1rem;
+}

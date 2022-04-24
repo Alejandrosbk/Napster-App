@@ -1,0 +1,30 @@
+<div class="side-bar">
+    <div class="brand">
+        <img src="assets/images/logo.png" alt="napster-logo" class="napster-logo">
+    </div>
+    <ul class="side-bar__list list-one">
+        <li [routerLink]="item.router" *ngFor="let item of mainMenu.defaultOptions">
+            <div class="list-wrapper-item">
+                <i [ngClass]="['uil',item.icon]"></i>
+                <span class="side-bar__list list-label">{{item.name}}</span>
+            </div>
+        </li>
+    </ul>
+    <div class="side-bar__separator"></div>
+    <ul class="side-bar__list list-two">
+        <li [routerLink]="item.router" *ngFor="let item of mainMenu.accessLink">
+            <div class="list-wrapper-item">
+                <i [ngClass]="['uil',item.icon]"></i>
+                <span class="side-bar__list list-label">{{item.name}}</span>
+            </div>
+        </li>
+    </ul>
+    <div class="side-bar__separator line-separator"></div>
+    <ul class="side-bar__list list-three">
+        <li *ngFor="let item of customOptions">
+            <div class="list-wrapper-item">
+                <span class="side-bar__list list-label">{{item.name}}</span>
+            </div>
+        </li>
+    </ul>
+</div>

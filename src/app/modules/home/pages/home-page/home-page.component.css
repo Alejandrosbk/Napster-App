@@ -1,0 +1,10 @@
+.home-wrapper {
+    margin: 0 0 0 17.5rem;
+    background: -moz-linear-gradient(top, #26739D 0%, rgba(28, 28, 34, 1) 43%, rgba(28, 28, 34, 1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, #26739D), color-stop(43%, rgba(28, 28, 34, 1)), color-stop(100%, rgba(28, 28, 34, 1)));
+    background: -webkit-linear-gradient(top, #26739D 0%, rgba(28, 28, 34, 1) 43%, rgba(28, 28, 34, 1) 100%);
+    background: -o-linear-gradient(top, #26739D 0%, rgba(28, 28, 34, 1) 43%, rgba(28, 28, 34, 1) 100%);
+    background: -ms-linear-gradient(top, #26739D 0%, rgba(28, 28, 34, 1) 43%, rgba(28, 28, 34, 1) 100%);
+    background: linear-gradient(to bottom, #26739D 0%, rgba(28, 28, 34, 1) 43%, rgba(28, 28, 34, 1) 100%);
+    min-height: 100vh;
+}
