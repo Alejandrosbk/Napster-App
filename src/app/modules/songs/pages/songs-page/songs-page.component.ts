@@ -22,6 +22,7 @@ export class SongsPageComponent implements OnInit, OnDestroy {
     this.loadDataAll();
     this.loadDataRandom();
     this.LoadArtistTop();
+    this.loadArtistsImages();
   }
 
   // TAMBIEN SE PUEDEN MANEJAR LOS OBSERVABLES COPMO PROMESAS Y VA A FUNCIONAR IGUAL QUE EL SUBSCRIBE
@@ -35,6 +36,14 @@ export class SongsPageComponent implements OnInit, OnDestroy {
     .subscribe((response: topArtists[]) => {
       this.topArtist = response;
       console.log('Top 10 de Artistas', response);
+    })
+  }
+
+  loadArtistsImages():void {
+    this.songsService.getArtistsImages$()
+    .subscribe(response => {
+      console.log(response);
+      
     })
   }
 

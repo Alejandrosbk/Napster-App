@@ -55,6 +55,21 @@ export class SongsService {
     )
   }
 
+  getArtistsImages$() {
+    return this.http.get(`${this.URI}/artists/Art.15237004/images?apikey=YTkxZTRhNzAtODdlNy00ZjMzLTg0MWItOTc0NmZmNjU4Yzk4`)
+    .pipe(
+      map(({ images }: any) => {  // MAPEAMOS LA API PARA EXTRAER UNICAMENTE EL ARRAY QUE QUEREMOS
+        return images;
+      }),
+      catchError((err) => {
+        setTimeout(() => {
+          this.toastr.error('Algo salio mal', 'Revisa la API Napster!');
+        }, 1000);
+        return of([])
+      })
+    )
+  }
+
   getAllRandom$():Observable<any>{
     return this.http.get(`${this.URL}/tracks`)
     .pipe(

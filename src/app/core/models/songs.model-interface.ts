@@ -7,5 +7,14 @@ export interface SongsModel {
   cover?: string;
   artist?: ArtistModel;
   duration?: number;
+  type?: string;
+  links?: artistsImages;
   url?: any;
+}
+
+interface artistsImages {
+  images?: hrefImages;
+}
+interface hrefImages {
+  href?: string;
 }
