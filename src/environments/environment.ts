@@ -5,8 +5,7 @@
 export const environment = {
   production: false,
   api: "https://node-api-tracks.herokuapp.com/api/1.0",
-  apiNap: "https://api.napster.com/v2.2",
-  apiKey: "ZTk2YjY4MjMtMDAzYy00MTg4LWE2MjYtZDIzNjJmMmM0YTdm"
+  apiNap: "http://api.napster.com/v2.2",
 };
 
 /*

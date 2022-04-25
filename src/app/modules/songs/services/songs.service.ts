@@ -13,7 +13,6 @@ export class SongsService {
   // DECLARAMOS UNA PROPIEDAD DE SOLO LECTURA CON LA VARIABLE API
   private readonly URL = environment.api;
   private readonly URI = environment.apiNap;
-  private readonly apiKey = environment.apiKey;
 
   constructor( private http: HttpClient, private toastr: ToastrService ) {}
 
@@ -42,8 +41,11 @@ export class SongsService {
   }
 
   getArtistTop$():Observable<any>{
-    return this.http.get(`${this.URI}/artists/top?apiKey=${this.apiKey}`)
+    return this.http.get(`${this.URI}/artists/top?apikey=YTkxZTRhNzAtODdlNy00ZjMzLTg0MWItOTc0NmZmNjU4Yzk4&limit=10`)
     .pipe(
+      map(({ artists }: any) => {  // MAPEAMOS LA API PARA EXTRAER UNICAMENTE EL ARRAY QUE QUEREMOS
+        return artists;
+      }),
       catchError((err) => {
         setTimeout(() => {
           this.toastr.error('Algo salio mal', 'Revisa la API Napster!');

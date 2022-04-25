@@ -3,6 +3,7 @@ import { SongsModel } from '@core/models/songs.model-interface';
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { SongsService } from '@modules/songs/services/songs.service';
 import { ToastrService } from 'ngx-toastr';
+import { topArtists } from '@core/models/topArtists.model-interface';
 
 @Component({
   selector: 'app-songs-page',
@@ -12,7 +13,7 @@ import { ToastrService } from 'ngx-toastr';
 export class SongsPageComponent implements OnInit, OnDestroy {
   songsTrending: Array<SongsModel> = [];
   songsRandom: Array<SongsModel> = [];
-  topArtist: any;
+  topArtist: Array<topArtists> = [];
   listObservers$: Array<Subscription> = [];
 
   constructor( private songsService: SongsService, private toastr: ToastrService ) { }
@@ -31,8 +32,9 @@ export class SongsPageComponent implements OnInit, OnDestroy {
 
   LoadArtistTop():void {
     this.songsService.getArtistTop$()
-    .subscribe(response => {
-      console.log(response); 
+    .subscribe((response: topArtists[]) => {
+      this.topArtist = response;
+      console.log('Top 10 de Artistas', response);
     })
   }
 
